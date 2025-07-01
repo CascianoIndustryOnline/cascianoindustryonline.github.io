@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chi Siamo - Casciano Industry</title>
+      <link rel="icon" type="logo" href="img/LogoHE.png" />
+  <link rel="stylesheet" href="css/chisiamo.css"> <!-- Assicurati che questo punti al tuo CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header con logo e menu -->
+   <!-- Header Moderno -->
+<header class="header">
+    <div class="logo-container">
+        <a href="index.html" class="logo-link" aria-label="Torna alla home">
+            <img src="img/Logo.jpg" alt="Casciano Industry Logo" class="logo-img">
+        </a>
+    </div>
+    <nav class="nav" id="nav">
+        <ul>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="chisiamo.html" class="nav-link active">Chi Siamo</a></li>
+                <li><a href="service.html" class="nav-link">Servizi</a></li>
+                <li><a href="lavanderia.html" class="nav-link">Lavanderia</a></li>
+                <li><a href="logistica.html" class="nav-link">Logistica</a></li>
+                <li><a href="contact.html" class="nav-link">Contatti</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="chi-siamo-section" id="chi-siamo">
+  <div class="container video-text-container">
+    <div class="video-box narrow-video">
+      <video id="video-chi-siamo" controls playsinline>
+        <source src="img/Chisiamo.mp4" type="video/mp4">
+        Il tuo browser non supporta il video HTML5.
+      </video>
+    </div>
+<section class="lavanderia-section" style="text-align: center;">
+    <h2 class="section-title">Chi Siamo?</h2>
+    <p>
+        La lavanderia Casciano Industry si trova nella Zona Industriale "Poggino" a Viterbo e vanta una struttura di 1200 mq totali dedicati sia ai servizi di lavaggio e stiratura, sia al magazzino con ampia scelta di biancheria e tovagliati per il noleggio.<br>
+        Consapevoli delle esigenze degli operatori nel settore della ristorazione e alberghiero, la lavanderia Casciano Industry rappresenta una garanzia in termini di qualità ed efficienza, grazie a un bagaglio di esperienze maturato in oltre vent’anni di attività e professionalità, grazie alla presenza di personale specializzato e qualificato.<br>
+        Il nostro successo si basa anche sull’utilizzo di macchinari tecnologicamente avanzati, nonché ai migliori materiali presenti sul mercato.<br>
+        Garantiamo un’assoluta qualità in termini di prodotti e servizi da noleggiare.<br>
+        La lavanderia Casciano Industry ha un proprio parco automezzi sempre operativo per assicurare velocità e puntualità nei ritiri e nelle consegne.<br>
+        Siamo presenti prevalentemente nelle province di Lazio, Campania, Toscana, Umbria, dove curiamo capillarmente il territorio ottimizzando tempi di ritiro e consegna, con carattere settimanale, bisettimanale o con richieste urgenti.
+    </p>
+</section>
+
+
+<script>
+  const video = document.getElementById('video-chi-siamo');
+  video.volume = 1; // volume massimo
+
+  video.addEventListener('play', () => {
+    video.muted = false;  // disattiva muto se per caso è attivo
+    video.volume = 1;     // imposta volume al massimo
+  });
+</script>
+
+    <div class="services-grid">
+      <div class="service-card">
+                <h3 class="service-title">Esperienza</h3>
+        <div class="service-icon">🏆</div>
+        <p class="service-text">
+          Da due decenni lavanderia Casciano unisce tradizione e innovazione nella cura dei tessuti
+        </p>
+      </div>
+      <div class="service-card">
+                <h3 class="service-title">Sostenibilità</h3>
+        <div class="service-icon">🌱</div>
+        <p class="service-text">
+          Tutti i nostri fornitori tessili sono dotati di:<br><strong>OEKO-TEX STANDARD 100</strong><br>è una certificazione internazionale che garantisce l'assenza di sostanze nocive nei prodotti tessili, assicurando sicurezza e qualita per la salute e l'ambiente
+        </p>
+      </div>
+      <div class="service-card">
+                <h3 class="service-title">Affidabilità</h3>
+        <div class="service-icon">🤝</div>
+        <p class="service-text">
+          La puntualità e la qualità dei nostri servizi sono garantite da un team competente e tecnologie all'avanguardia.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="clienti-section" id="clienti">
+  <div class="container">
+    <h2 class="section-title">I Nostri Numeri</h2>
+    <div class="tabella-numeri">
+      <div><span class="counter" data-target="650">0</span><br>Clienti</div>
+      <div><span class="counter" data-target="70000">0</span><br>Capi stirati / gg</div>
+      <div><span class="counter" data-target="35000">0</span><br>kg biancheria / gg</div>
+      <div><span class="counter" data-target="200">0</span><br>Consegne / gg</div>
+      <div><span class="counter" data-target="2500">0</span><br>km percorsi / gg</div>
+      <div><span class="counter" data-target="500">0</span><br>m³ acqua purificata / gg</div>
+      <div><span class="counter" data-target="500">0</span><br>ore ricerca-sviluppo</div>
+      <div><span class="counter" data-target="6000">0</span><br>m² area operativa</div>
+      <div><span class="counter" data-target="120">0</span><br>macchinari utilizzati</div>
+    </div>
+  </div>
+</section>
+
+  <br>
+  <br>
+
+<footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">CASCIANO INDUSTRY</div>
+                    <p>Noleggio e lavaggio biancheria e tovagliati da camera, da sala e da cerimonia per:<br>
+                    > Alberghi,<br> > Hotel, <br>> Ristoranti, <br>> Agriturismi, <br>> Pizzerie, <br>> Bed & Breakfast e Comunità di Servizi.</p>
+                    <p>------------------------------------------</p>
+                    <p>Via dei Sindacati, 4<br> 01100 Viterbo (VT)<br>Italia</p>
+                    <p>P.IVA: IT06054800658</p>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Link veloci</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="service.html">Servizi</a></li>
+                        <li><a href="contact.html">Contatti</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Contatti</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +39 0761270264</li>
+                        <li><i class="fas fa-envelope"></i>info@cascianoindustry.it</li>
+                        <li><i class="fas fa-clock"></i> Lun-Ven: 9:00 - 18:00</li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Seguici</h3>
+                    <div class="social-links">
+                        <a href="https://it.linkedin.com/company/casciano-industry" class="social-icon" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.instagram.com/casciano_industry/" class="social-icon" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com/people/Casciano-Industry/100091365794450/" class="social-icon" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@cascianoindustry" class="social-icon" aria-label="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+ <div class="footer-bottom">
+  <p>&copy; 2025 Casciano Industry. Tutti i diritti riservati.</p>
+
+  <div class="footer-bottom-right">
+              <span>Sito prodotto da: </span> <br> 
+    <a href="link megi" target="_blank">
+      <img src="img/logoMeGi.png" alt="Logo Produttore" class="producer-logo">
+    </a>
+  </div>
+
+  <div class="legal-links">
+                    <a href="">Privacy Policy</a>
+                    <a href="cookie.html">Cookie Policy</a>
+                    <a href="">Termini di servizio</a>
+  </div>
+</div>
+            </div>
+        </div>
+    </footer>
+
+<script>
+  function animateCounters() {
+    const counters = document.querySelectorAll('.counter');
+    const speed = 100; // più grande = più lento
+
+    counters.forEach(counter => {
+      const updateCount = () => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText.replace(/\./g, '');
+        const increment = Math.ceil(target / speed);
+
+        if (count < target) {
+          counter.innerText = (count + increment).toLocaleString('it-IT');
+          setTimeout(updateCount, 40); // intervallo più lungo = più lento
+        } else {
+          counter.innerText = target.toLocaleString('it-IT');
+        }
+      };
+
+      updateCount();
+    });
+  }
+
+  let countersStarted = false;
+  window.addEventListener('scroll', () => {
+    const section = document.getElementById('clienti');
+    const sectionTop = section.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    if (!countersStarted && sectionTop < windowHeight - 100) {
+      countersStarted = true;
+      animateCounters();
+    }
+  });
+</script>
+
+
+</body>
+</html>

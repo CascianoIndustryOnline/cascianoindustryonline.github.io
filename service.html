@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Servizi - Casciano Industry</title>    
+    <link rel="icon" type="logo" href="img/LogoHE.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/service.css" />
+</head>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+document.body.classList.add("page-transition");
+
+const links = document.querySelectorAll("a[href]:not([target]):not([href^='#']):not([href^='mailto:']):not([href^='tel:'])");
+
+ links.forEach(link => {
+ link.addEventListener("click", function (e) {
+ e.preventDefault();
+ const url = this.href;
+
+ document.body.classList.add("fade-out");
+
+ setTimeout(() => {
+ window.location.href = url;
+}, 400); // durata fade-out
+ });
+ });
+});
+</script>
+
+
+<body class="page-transition">
+    <!-- Header Moderno -->
+<header class="header">
+    <div class="logo-container">
+        <a href="index.html" class="logo-link" aria-label="Torna alla home">
+            <img src="img/Logo.jpg" alt="Casciano Industry Logo" class="logo-img">
+        </a>
+    </div>
+    <nav class="nav" id="nav">
+        <ul>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="chisiamo.html" class="nav-link">Chi Siamo</a></li>
+                <li><a href="service.html" class="nav-link active">Servizi</a></li>
+                <li><a href="lavanderia.html" class="nav-link">Lavanderia</a></li>
+                <li><a href="logistica.html" class="nav-link">Logistica</a></li>
+                <li><a href="contact.html" class="nav-link">Contatti</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<!-- Sezione Servizi -->
+<section id="services" class="services-section">
+  <div class="container">
+    <h2 class="section-title">I Nostri Servizi</h2>
+    <p class="services-description">
+      Noi della Casciano Industry proponiamo soluzioni tessili per ogni esigenza, unendo qualità, efficienza e innovazione in qualsiasi campo.
+    </p>
+    <div class="services-grid">
+      <div class="service-card">
+        <i class="fas fa-hotel service-icon"></i>
+        <h3 class="service-title">Alberghi</h3>
+        <p class="service-text">Casciano Industry offre soluzioni su misura per il settore turistico, agli alberghi di lusso, ai Boutique Hotel e ville di lusso</p>
+        <a href="contact.html" class="btn btn-primary btn-pill">Richiedi Preventivo</a>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-bed service-icon"></i>
+        <h3 class="service-title">Hotel</h3>
+        <p class="service-text">Casciano Industry offre soluzioni su misura per il settore turistico, ai B&B, agli Hotel e Ostelli.</p>
+        <a href="contact.html" class="btn btn-primary btn-pill">Richiedi Preventivo</a>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-utensils service-icon"></i>
+        <h3 class="service-title">Ristoranti</h3>
+        <p class="service-text">Casciano Industry fornisce tovagliato su misura per ristoranti e locali, unendo qualità e quantità per ogni tipo di clientela.</p>
+        <a href="contact.html" class="btn btn-primary btn-pill">Richiedi Preventivo</a>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-tractor service-icon"></i>
+        <h3 class="service-title">Agriturismi</h3>
+        <p class="service-text">Casciano Industry fornisce tessili su misura per agriturismi, combinando funzionalità, eleganza e rispetto per lo stile rustico.</p>
+        <a href="contact.html" class="btn btn-primary btn-pill">Richiedi Preventivo</a>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-pizza-slice service-icon"></i>
+        <h3 class="service-title">Pizzerie</h3>
+        <p class="service-text">Casciano Industry offre tovagliato elegante e di qualità per pizzerie, unendo praticità e stile per ogni tipo di ambiente.</p>
+        <a href="contact.html" class="btn btn-primary btn-pill">Richiedi Preventivo</a>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-home service-icon"></i>
+        <h3 class="service-title">Catering </h3>
+        <p class="service-text">Casciano Industry Offre tovagliati personalizzati per misura e colore adatti a tutte le vostre esigenze, fatti con i migliori filati e le migliori tecniche di produzione MIT (Made In Italy)</p>
+        <a href="contact.html" class="btn btn-primary btn-pill">Richiedi Preventivo</a>
+      </div>
+        <div class="service-card">
+        <i class="fas fa-hospital service-icon"></i>
+        <h3 class="service-title">Sanitario </h3>
+        <p class="service-text">Casciano Industry garantisce un servizio pensato per rispondere agli standard elevati delle strutture sanitarie.<br>Perchè l'igiene per noi, è una responsabilità condivisa.</p>
+        <a href="contact.html" class="btn btn-primary btn-pill">Richiedi Preventivo</a>
+      </div>
+        <div class="service-card">
+        <i class="fas fa-ship service-icon"></i>
+        <h3 class="service-title">Navale </h3>
+        <p class="service-text">Casciano Industry è il partner ideale per le compagnie di navigazione. Offriamo lavaggi professionali, ritiro e consegna sincroniuzzati agli scali, tutto con un solo obiettivo: garantire, qualità e igiene ovunque vada la tua flotta</p>
+        <a href="contact.html" class="btn btn-primary btn-pill">Richiedi Preventivo</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">CASCIANO INDUSTRY</div>
+                    <p>Noleggio e lavaggio biancheria e tovagliati da camera, da sala e da cerimonia per:<br>
+                    > Alberghi,<br> > Hotel, <br>> Ristoranti, <br>> Agriturismi, <br>> Pizzerie, <br>> Bed & Breakfast e Comunità di Servizi.</p>
+                    <p>------------------------------------------</p>
+                    <p>Via dei Sindacati, 4<br> 01100 Viterbo (VT)<br>Italia</p>
+                    <p>P.IVA: IT06054800658</p>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Link veloci</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="service.html">Servizi</a></li>
+                        <li><a href="contact.html">Contatti</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Contatti</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +39 0761270264</li>
+                        <li><i class="fas fa-envelope"></i>info@cascianoindustry.it</li>
+                        <li><i class="fas fa-clock"></i> Lun-Ven: 9:00 - 18:00</li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Seguici</h3>
+                    <div class="social-links">
+                        <a href="https://it.linkedin.com/company/casciano-industry" class="social-icon" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.instagram.com/casciano_industry/" class="social-icon" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com/people/Casciano-Industry/100091365794450/" class="social-icon" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@cascianoindustry" class="social-icon" aria-label="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+  <div class="footer-bottom-right">
+      <p>&copy; 2025 Casciano Industry. Tutti i diritti riservati.</p>
+              <span>Sito prodotto da: </span> <br> 
+    <a href="link megi" target="_blank">
+      <img src="img/logoMeGi.png" alt="Logo Produttore" class="producer-logo">
+    </a>
+  </div>
+
+  <div class="legal-links">
+                    <a href="">Privacy Policy</a>
+                    <a href="cookie.html">Cookie Policy</a>
+                    <a href="">Termini di servizio</a>
+  </div>
+</div>
+            </div>
+        </div>
+    </footer>

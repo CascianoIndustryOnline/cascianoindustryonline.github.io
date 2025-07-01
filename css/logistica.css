@@ -1,0 +1,433 @@
+:root {
+  --primary: #00bfae;
+  --accent: #008f7a;
+  --dark: #1a1a1a;
+  --light: #f9f9f9;
+  --transition: 0.3s ease;
+  --font-primary: 'Montserrat', sans-serif;
+  --font-secondary: 'Playfair Display', serif;
+  --logo-height: 100px;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--light);
+  color: var(--dark);
+  line-height: 1.6;
+  transition: opacity 0.5s ease;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  padding-bottom: 10px;
+  display: block;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+  width: 100%;
+}
+
+.logo-img {
+  height: var(--logo-height);
+  transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.1);
+}
+
+/* Navigation */
+.nav {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  list-style: none;
+  padding: 10px 0;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--dark);
+  font-weight: 500;
+  position: relative;
+  padding: 5px 0;
+  transition: color var(--transition);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--primary);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary);
+  transition: width var(--transition);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Lavanderia Section */
+.lavanderia-section {
+  padding: 80px 0;
+  background: #fff;
+}
+
+.lavanderia-section .section-title {
+  text-align: center;
+  font-size: 2.8rem;
+  font-family: var(--font-secondary);
+  color: var(--primary);
+  margin-bottom: 60px;
+}
+
+.lavanderia-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+  gap: 40px;
+}
+
+.lavanderia-item.reverse {
+  flex-direction: row-reverse;
+}
+
+.lavanderia-img-container {
+  flex: 1;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.lavanderia-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.lavanderia-img:hover {
+  transform: scale(1.03);
+}
+
+.lavanderia-text-box {
+  flex: 1;
+}
+
+.lavanderia-text-box h3 {
+  font-size: 1.8rem;
+  font-family: var(--font-secondary);
+  color: var(--accent);
+  margin-bottom: 15px;
+}
+
+.lavanderia-text-box p {
+  font-size: 1.1rem;
+  color: var(--dark);
+}
+
+/* Footer */
+/* Footer */
+.footer {
+  background-color: var(--dark);
+  color: white;
+  padding: 60px 0 0;
+}
+
+.footer .container,
+.footer * {
+  text-align: left;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.footer-col h3 {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  color: white;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.footer-col h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background-color: var(--accent);
+}
+
+.footer-logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.footer ul {
+  list-style: none;
+}
+
+.footer li {
+  margin-bottom: 10px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.footer li i {
+  margin-right: 10px;
+  color: var(--primary);
+}
+
+/* Nuovo contenitore per contatti e social */
+.footer-contacts {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border-radius: 50%;
+  transition: var(--transition);
+  color: var(--dark);
+}
+
+.social-icon:hover {
+  background-color: var(--primary);
+  color: white;
+  transform: translateY(-5px);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 20px 0;
+  text-align: center;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.legal-links {
+  margin-top: 10px;
+}
+
+.legal-links a {
+  margin: 0 10px;
+  color: rgba(255, 255, 255, 0.7);
+  transition: var(--transition);
+}
+
+.legal-links a:hover {
+  color: var(--primary);
+}
+
+
+/* Animazioni */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100vh;
+    background-color: white;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+  }
+
+  .nav.active {
+    right: 0;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    padding: 100px 30px;
+  }
+
+  .nav li {
+    margin: 15px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lavanderia-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .lavanderia-item.reverse {
+    flex-direction: column;
+  }
+
+  .lavanderia-img-container,
+  .lavanderia-text-box {
+    width: 100%;
+  }
+
+  .lavanderia-text-box {
+    margin-top: 20px;
+  }
+}
+/* Container generale */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Titolo sezione */
+.section-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+/* Ogni item (riga) */
+.logistica-item {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+/* Alternanza: elementi con classe reverse hanno il flex-direction invertito */
+.logistica-item.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Contenitore video */
+.logistica-video-container {
+  flex: 1 1 50%;
+  max-width: 50%;
+}
+
+/* Video iframe con dimensione piena e stile */
+.logistica-video-container iframe {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Contenitore testo */
+.logistica-text-box {
+  flex: 1 1 50%;
+  max-width: 50%;
+}
+
+/* Titolo interno */
+.logistica-text-box h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Paragrafo */
+.logistica-text-box p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Responsive per schermi piccoli */
+@media (max-width: 768px) {
+  .logistica-item,
+  .logistica-item.reverse {
+    flex-direction: column !important;
+  }
+
+  .logistica-video-container,
+  .logistica-text-box {
+    max-width: 100%;
+  }
+
+  .logistica-video-container iframe {
+    height: 250px;
+  }
+}
+.producer-logo {
+  max-height: 60px;      /* altezza massima */
+  max-width: 60px;      /* larghezza massima */
+  width: auto;
+  height: auto;
+  display: inline-block;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.producer-logo:hover {
+  transform: scale(1.1);
+}

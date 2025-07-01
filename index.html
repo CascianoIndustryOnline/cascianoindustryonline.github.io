@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casciano Industry | Soluzioni Industriali Innovative</title>
+        <link rel="icon" type="logo" href="img/LogoHE.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+document.body.classList.add("page-transition");
+
+const links = document.querySelectorAll("a[href]:not([target]):not([href^='#']):not([href^='mailto:']):not([href^='tel:'])");
+
+ links.forEach(link => {
+ link.addEventListener("click", function (e) {
+ e.preventDefault();
+ const url = this.href;
+
+ document.body.classList.add("fade-out");
+
+ setTimeout(() => {
+ window.location.href = url;
+}, 500); // durata fade-out
+ });
+ });
+});
+</script>
+
+<body class="page-transition">
+    <div class="loader">
+        <div class="loader-circle"></div>
+    </div>
+
+    <header class="header">
+    <div class="container">
+        <div class="logo-container">
+            <a href="index.html" class="logo-link" aria-label="Torna alla home">
+                <img src="img/Logo.jpg" alt="Casciano Industry Logo" class="logo-img">
+            </a>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <nav class="nav" id="nav">
+            <ul>
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="chisiamo.html" class="nav-link">Chi Siamo</a></li>
+                <li><a href="service.html" class="nav-link">Servizi</a></li>
+                <li><a href="lavanderia.html" class="nav-link">Lavanderia</a></li>
+                <li><a href="logistica.html" class="nav-link">Logistica</a></li>
+                <li><a href="contact.html" class="nav-link">Contatti</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<div id="cookie-banner" style="
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #222;
+  color: white;
+  padding: 15px 20px;
+  font-family: Montserrat, sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10000;
+">
+  <span>Utilizziamo cookie per migliorare la tua esperienza sul sito. <a href="cookie.html" style="color: #4CAF50; text-decoration: underline;">Scopri di più</a>.</span>
+  <button id="cookie-accept" style="
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+  ">Accetto</button>
+</div>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const banner = document.getElementById("cookie-banner");
+    const acceptBtn = document.getElementById("cookie-accept");
+
+    // Controlla se è già stato accettato
+    if (localStorage.getItem("cookieAccepted") === "true") {
+      banner.style.display = "none";
+    }
+
+    acceptBtn.addEventListener("click", function() {
+      localStorage.setItem("cookieAccepted", "true");
+      banner.style.display = "none";
+    });
+  });
+</script>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1 class="hero-title" data-aos="fade-up">
+                <span>Innovazione</span> e <span>Qualità</span> Per Voi!
+            </h1>
+            <p class="hero-subtitle nero" data-aos="fade-up" data-aos-delay="200">
+                <strong>L'INDUSTRIA DEL LAVAGGIO PARTNER DEL VOSTRO BUSINESS!</strong>
+            </p>
+            <a href="contact.html" class="cta-button" data-aos="fade-up" data-aos-delay="400">
+                Richiedi un preventivo
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+        <div class="hero-scroll verde-acqua">
+            <span>Scorri per scoprire</span>
+            <div class="scroll-icon"></div>
+        </div>
+    </section>
+
+    <section class="service-strength-section">
+        <div class="container">
+            <h2 class="section-heading-with-lines">PUNTI DI FORZA DEL NOSTRO SERVIZIO</h2>
+            <div class="strength-grid">
+                <div class="strength-item">
+                    <div class="strength-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <p>OPERATIVI IN 4 REGIONI:<br>LAZIO, TOSCANA, UMBRIA E CAMPANIA</p>
+                </div>
+                <div class="strength-item">
+                    <div class="strength-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <p>CONSEGNA PUNTUALI E ASSICURATE<br>7 GIORNI SU 7</p>
+                </div>
+                <div class="strength-item">
+                    <div class="strength-icon">
+                        <i class="fas fa-recycle"></i>
+                    </div>
+                    <p>TECNOLOGIE ALL'AVANGUARDIA<br>ED ECO-FRIENDLY</p>
+                </div>
+                <div class="strength-item">
+                    <div class="strength-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <p>DA 20 ANNI CON VOI<br>E PER VOI</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+        <img src="img/lavanderia.jpg" alt="immagine">
+            </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">CASCIANO INDUSTRY</div>
+                    <p>Noleggio e lavaggio biancheria e tovagliati da camera, da sala e da cerimonia per:<br>
+                    > Alberghi,<br> > Hotel, <br>> Ristoranti, <br>> Agriturismi, <br>> Pizzerie, <br>> Bed & Breakfast e Comunità di Servizi.</p>
+                    <p>------------------------------------------</p>
+                    <p>Via dei Sindacati, 4<br> 01100 Viterbo (VT)<br>Italia</p>
+                    <p>P.IVA: IT06054800658</p>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Link veloci</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="service.html">Servizi</a></li>
+                        <li><a href="contact.html">Contatti</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Contatti</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +39 0761270264</li>
+                        <li><i class="fas fa-envelope"></i>info@cascianoindustry.it</li>
+                        <li><i class="fas fa-clock"></i> Lun-Ven: 9:00 - 18:00</li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Seguici</h3>
+                    <div class="social-links">
+                        <a href="https://it.linkedin.com/company/casciano-industry" class="social-icon" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.instagram.com/casciano_industry/" class="social-icon" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com/people/Casciano-Industry/100091365794450/" class="social-icon" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@cascianoindustry" class="social-icon" aria-label="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Casciano Industry. Tutti i diritti riservati.</p>
+                <div class="legal-links">
+                    <a href="">Privacy Policy</a>
+                    <a href="cookie.html">Cookie Policy</a>
+                    <a href="">Termini di servizio</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
