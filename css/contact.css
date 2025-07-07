@@ -628,3 +628,44 @@ body.fade-out {
 .producer-logo:hover {
   transform: scale(1.1);
 }
+.thank-you-section {
+  background-color: #f7f7f7;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.thank-you-wrapper {
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 60px 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.thank-you-wrapper h1 {
+  color: #1d1d1d;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.thank-you-wrapper p {
+  font-size: 1.2rem;
+  color: #444;
+  margin-bottom: 40px;
+}
+
+.thank-you-button {
+  display: inline-block;
+  background-color: #00b9ad;
+  color: white;
+  text-decoration: none;
+  padding: 14px 28px;
+  font-size: 1rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.thank-you-button:hover {
+  background-color: #009c91;
+}
