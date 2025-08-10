@@ -1,7 +1,6 @@
 /* Variabili colori */
 :root {
-    --primary: #00bfae;
-    /* verde acqua */
+    --primary: #00bfae;          /* verde acqua */
     --accent: #008f7a;
     --dark: #1a1a1a;
     --light: #f9f9f9;
@@ -9,7 +8,9 @@
     --font-primary: 'Montserrat', sans-serif;
     --font-secondary: 'Playfair Display', serif;
     --logo-height: 100px;
-    /* dimensione logo */
+    --border-radius: 8px;
+    --box-shadow-light: 0 2px 10px rgba(0, 0, 0, 0.05);
+    --box-shadow-strong: 0 10px 20px rgba(0, 191, 174, 0.15);
 }
 
 /* Reset base */
@@ -26,7 +27,6 @@ body {
     line-height: 1.6;
 }
 
-
 /* Container */
 .container {
     width: 90%;
@@ -36,14 +36,12 @@ body {
 
 /* Header */
 .header {
-    background-color: white;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    background-color: #fff;
+    box-shadow: var(--box-shadow-light);
     position: sticky;
     top: 0;
     z-index: 999;
     padding-bottom: 10px;
-    display: block;
-    /* logo sopra, nav sotto */
 }
 
 .logo-container {
@@ -57,6 +55,7 @@ body {
 .logo-img {
     height: var(--logo-height);
     transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
 .logo-img:hover {
@@ -75,7 +74,6 @@ body {
     gap: 30px;
     list-style: none;
     padding: 10px 0;
-    margin: 0;
 }
 
 .nav-link {
@@ -84,7 +82,7 @@ body {
     font-weight: 500;
     position: relative;
     padding: 5px 0;
-    transition: color 0.3s ease;
+    transition: color var(--transition);
 }
 
 .nav-link:hover,
@@ -100,7 +98,7 @@ body {
     width: 0;
     height: 2px;
     background-color: var(--primary);
-    transition: width 0.3s ease;
+    transition: width var(--transition);
 }
 
 .nav-link:hover::after,
@@ -135,17 +133,18 @@ body {
 }
 
 .contacts-grid {
-    display: grid;
-    /* Mantiene la griglia per info contatto e modulo principale */
-    grid-template-columns: 1fr 1fr;
+    display: flex;              /* cambia da grid a flex */
+    flex-direction: column;     /* impila verticalmente */
+    align-items: center;        /* centra orizzontalmente */
     gap: 50px;
     max-width: 900px;
     margin: 0 auto;
+    text-align: center;         /* centra testo nei figli */
     opacity: 0;
     animation: fadeInUp 1.5s ease forwards;
     animation-delay: 0.4s;
-    text-align: left;
 }
+
 
 .contact-info h3 {
     font-family: var(--font-secondary);
@@ -178,23 +177,35 @@ body {
 .social-links {
     display: flex;
     gap: 15px;
+    margin-bottom: 20px;
 }
 
 .social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
     color: var(--dark);
     font-size: 1.4rem;
-    transition: color 0.3s ease;
+    transition: background-color var(--transition), transform var(--transition), color var(--transition);
+    cursor: pointer;
 }
 
 .social-icon:hover {
-    color: var(--primary);
+    background-color: var(--primary);
+    color: #fff;
+    transform: translateY(-5px);
 }
 
+/* Form di contatto */
 .contact-form {
-    background-color: white;
+    background-color: #fff;
     padding: 30px 25px;
     border-radius: 12px;
-    box-shadow: 0 10px 20px rgba(0, 191, 174, 0.15);
+    box-shadow: var(--box-shadow-strong);
 }
 
 .contact-form label {
@@ -210,7 +221,7 @@ body {
     padding: 10px 12px;
     margin-bottom: 20px;
     border: 1.5px solid #ccc;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     font-size: 1rem;
     font-family: var(--font-primary);
     transition: border-color var(--transition);
@@ -224,7 +235,7 @@ body {
 
 .contact-form button {
     background-color: var(--primary);
-    color: white;
+    color: #fff;
     font-weight: 700;
     padding: 12px 25px;
     border: none;
@@ -232,37 +243,36 @@ body {
     cursor: pointer;
     font-size: 1.1rem;
     transition: background-color var(--transition);
-    width: auto; /* Per non farlo occupare tutta la larghezza */
-    display: block; /* Per posizionarlo su una nuova riga */
-    margin: 20px auto 0; /* Centra il pulsante */
+    display: block;
+    margin: 20px auto 0;
+    width: auto;
 }
 
 .contact-form button:hover {
     background-color: var(--accent);
 }
 
-/* Stili specifici per la sezione Richiesta Ordine */
+/* Sezione Richiesta Ordine */
 .order-section .section-title {
-    margin-top: 60px; /* Ripristina il margine superiore che avevi in-line */
+    margin-top: 60px;
 }
 
-/* Nuovo contenitore per le sezioni degli articoli dell'ordine */
 .order-form-sections {
     display: flex;
-    flex-direction: column; /* Impila le categorie verticalmente */
-    gap: 30px; /* Spazio tra le categorie (Articoli Letto, Articoli Bagno, etc.) */
-    margin-top: 30px; /* Spazio tra la descrizione e l'inizio delle sezioni */
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 30px;
 }
 
 .order-category h3 {
     font-family: var(--font-primary);
     font-size: 1.3rem;
     margin-bottom: 15px;
-    color: var(--dark); /* O var(--primary) se vuoi che sia verde acqua */
+    color: var(--dark);
 }
 
 .order-category label {
-    display: block; /* Ogni label su una nuova riga */
+    display: block;
     margin-bottom: 8px;
     font-weight: 600;
     color: var(--dark);
@@ -274,9 +284,9 @@ body {
 .order-category textarea {
     width: 100%;
     padding: 10px 12px;
-    margin-bottom: 20px; /* Spazio sotto ogni input */
+    margin-bottom: 20px;
     border: 1.5px solid #ccc;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     font-size: 1rem;
     font-family: var(--font-primary);
     transition: border-color var(--transition);
@@ -287,7 +297,6 @@ body {
     border-color: var(--primary);
     outline: none;
 }
-
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -317,13 +326,13 @@ body {
         opacity: 0;
         transform: translateY(20px);
     }
-
     100% {
         opacity: 1;
         transform: translateY(0);
     }
 }
-/* --- Transizione tra pagine --- */
+
+/* Transizione pagine */
 body.page-transition {
     opacity: 1;
     transition: opacity 0.5s ease;
@@ -333,52 +342,29 @@ body.fade-out {
     opacity: 0;
 }
 
-/* Questi stili erano già presenti, li ho solo riorganizzati e resi più generici */
-/* Affinché funzionino meglio con i nuovi contenitori */
-.order-section input[type="number"],
-.order-section input[type="text"],
-.order-section input[type="date"],
-.order-section textarea {
-    width: 100%;
-    padding: 10px 12px;
-    margin-bottom: 20px;
-    border: 1.5px solid #ccc;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-family: var(--font-primary);
-    transition: border-color var(--transition);
-}
-
-.order-section input[type="number"]:focus,
-.order-section input[type="text"]:focus,
-.order-section input[type="date"]:focus,
-.order-section textarea:focus {
-    border-color: var(--primary);
-    outline: none;
-}
-
-/* FOOTER */
+/* Footer */
 .footer {
     background-color: var(--dark);
-    color: white;
+    color: #fff;
     padding: 60px 0 0;
-    text-align: left; /* tutto allineato a sinistra */
+    text-align: left;
 }
 
 .footer .container {
-    text-align: left; /* assicurati che il container sia left */
+    text-align: left;
 }
 
-/* Se vuoi che tutti i testi dentro footer siano left, puoi aggiungere: */
 .footer * {
     text-align: left;
 }
 
-/* Ma per la parte in basso, centrala di nuovo */
 .footer-bottom {
-    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding: 20px 0;
+    text-align: center;
+    font-size: 0.9rem;
 }
+
 .footer-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -389,7 +375,7 @@ body.fade-out {
 .footer-col h3 {
     font-size: 1.3rem;
     margin-bottom: 20px;
-    color: white;
+    color: #fff;
     position: relative;
     padding-bottom: 10px;
 }
@@ -408,7 +394,7 @@ body.fade-out {
     font-size: 1.8rem;
     font-weight: 700;
     margin-bottom: 20px;
-    color: white;
+    color: #fff;
 }
 
 .footer-logo .logo-highlight {
@@ -428,7 +414,7 @@ body.fade-out {
     color: var(--primary);
 }
 
-/* Qui centro la scritta "Scorri per scoprire" con animazione */
+/* Hero scroll */
 .hero-scroll {
     display: flex;
     flex-direction: column;
@@ -439,12 +425,11 @@ body.fade-out {
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
-    color: white; /* Se vuoi testo visibile */
+    color: #fff;
     font-weight: 500;
     font-size: 1.1rem;
 }
 
-/* Se vuoi regolare la dimensione o animazione dello scroll icon */
 .scroll-icon {
     margin-top: 10px;
     width: 24px;
@@ -465,29 +450,7 @@ body.fade-out {
     }
 }
 
-
-.social-links {
-    display: flex;
-    gap: 15px;
-    margin-bottom: 20px;
-}
-
-.social-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 50%;
-    transition: var(--transition);
-}
-
-.social-icon:hover {
-    background-color: var(--primary);
-    transform: translateY(-5px);
-}
-
+/* Newsletter */
 .newsletter {
     display: flex;
     margin-top: 20px;
@@ -504,7 +467,7 @@ body.fade-out {
 .newsletter button {
     padding: 10px 15px;
     background-color: var(--primary);
-    color: white;
+    color: #fff;
     border: none;
     border-radius: 0 4px 4px 0;
     cursor: pointer;
@@ -515,13 +478,7 @@ body.fade-out {
     background-color: var(--accent);
 }
 
-.footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 20px 0;
-    text-align: center;
-    font-size: 0.9rem;
-}
-
+/* Legal links */
 .legal-links {
     margin-top: 10px;
 }
@@ -536,36 +493,31 @@ body.fade-out {
     color: var(--primary);
 }
 
-/* RESPONSIVE STYLES */
+/* Responsive additions */
 @media (max-width: 992px) {
     .hero-title {
         font-size: 2.8rem;
     }
-    
     .hamburger {
         display: flex;
     }
-    
     .nav {
         position: fixed;
         top: 0;
         right: -100%;
         width: 300px;
         height: 100vh;
-        background-color: white;
+        background-color: #fff;
         box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
         transition: var(--transition);
     }
-    
     .nav.active {
         right: 0;
     }
-    
     .nav ul {
         flex-direction: column;
         padding: 100px 30px;
     }
-    
     .nav li {
         margin: 15px 0;
     }
@@ -575,15 +527,12 @@ body.fade-out {
     .hero-title {
         font-size: 2.2rem;
     }
-    
     .hero-subtitle {
         font-size: 1rem;
     }
-    
     .section {
         padding: 70px 0;
     }
-    
     .section-title {
         font-size: 2rem;
     }
@@ -593,79 +542,79 @@ body.fade-out {
     .hero-title {
         font-size: 1.8rem;
     }
-    
     .cta-button {
         padding: 12px 25px;
     }
-    
     .footer-grid {
         grid-template-columns: 1fr;
     }
-    
     .newsletter {
         flex-direction: column;
     }
-    
     .newsletter input {
         border-radius: 4px;
         margin-bottom: 5px;
     }
-    
     .newsletter button {
         border-radius: 4px;
     }
 }
+
+/* Producer logo */
 .producer-logo {
-  max-height: 60px;      /* altezza massima */
-  max-width: 60px;      /* larghezza massima */
-  width: auto;
-  height: auto;
-  display: inline-block;
-  object-fit: contain;
-  transition: transform 0.3s ease;
+    max-height: 60px;
+    max-width: 60px;
+    width: auto;
+    height: auto;
+    display: inline-block;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
 .producer-logo:hover {
-  transform: scale(1.1);
+    transform: scale(1.1);
 }
+
+/* Thank you section */
 .thank-you-section {
-  background-color: #f7f7f7;
-  padding: 100px 20px;
-  text-align: center;
+    background-color: #f7f7f7;
+    padding: 100px 20px;
+    text-align: center;
 }
 
 .thank-you-wrapper {
-  max-width: 700px;
-  margin: 0 auto;
-  background-color: white;
-  padding: 60px 30px;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 60px 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .thank-you-wrapper h1 {
-  color: #1d1d1d;
-  font-size: 2.5rem;
-  margin-bottom: 20px;
+    color: #1d1d1d;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
 }
 
 .thank-you-wrapper p {
-  font-size: 1.2rem;
-  color: #444;
-  margin-bottom: 40px;
+    font-size: 1.2rem;
+    color: #444;
+    margin-bottom: 40px;
 }
 
 .thank-you-button {
-  display: inline-block;
-  background-color: #00b9ad;
-  color: white;
-  text-decoration: none;
-  padding: 14px 28px;
-  font-size: 1rem;
-  border-radius: 8px;
-  transition: background-color 0.3s ease;
+    display: inline-block;
+    background-color: var(--primary);
+    color: #fff;
+    text-decoration: none;
+    padding: 14px 28px;
+    font-size: 1rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
 }
 
 .thank-you-button:hover {
-  background-color: #009c91;
+    background-color: #009c91;
 }
