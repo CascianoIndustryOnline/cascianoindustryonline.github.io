@@ -74,7 +74,7 @@ links.forEach(link => {
                         <li><i class="fas fa-phone"></i> +39 0761 270264</li>
                         <li><i class="fas fa-envelope"></i> info@cascianoindustry.it</li>
                         <li><i class="fas fa-map-marker-alt"></i> Via dei Sindacati, 4 - Viterbo (VT)</li>
-                        <li><i class="fas fa-clock"></i> Lun-Ven: 9:00 - 18:00</li>
+                        <li><i class="fas fa-clock"></i> Lun-Ven: 8:00 - 16:30</li>
                     </ul>
                     <div class="social-links">
                         <a href="#" class="social-icon" aria-label="LinkedIn"><i
@@ -88,86 +88,91 @@ links.forEach(link => {
 
                 
                 <form class="contact-form" action="https://formsubmit.co/info@cascianoindustry.it" method="POST" aria-label="Modulo contatti">
-                    <input type="hidden" name="_subject" value="Hai ricevuto una nuova richiesta di preventivo dal tuo sito!">
-                    <input type="hidden" name="_next" value="https://cascianoindustryonline.github.io/thx.html">
-                    <input type="hidden" name="_captcha" value="false">
-                    <label for="name">Nome</label>
-                    <input type="text" id="name" name="nome" placeholder="Il tuo nome" required>
+    <input type="hidden" name="_subject" value="Hai ricevuto una nuova richiesta di preventivo dal tuo sito!">
+    <input type="hidden" name="_next" value="https://cascianoindustryonline.github.io/thx.html">
+    <input type="hidden" name="_captcha" value="false">
+    
+    <label for="name">Nome</label>
+    <input type="text" id="name" name="nome" placeholder="Il tuo nome" required>
 
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="La tua email" required>
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" placeholder="La tua email" required>
 
-                    <label for="message">Messaggio</label>
-                    <textarea id="message" name="messaggio" rows="5" placeholder="Scrivi il tuo messaggio..." required></textarea>
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" placeholder="La tua password" required>
 
-                    <div class="order-section" style="margin-top: 60px;">
-                        <h2 class="section-title">Richiesta Ordine</h2>
-                        <p class="contacts-description">Inserisci le quantità annue che sfrutti di biancheria, lasciando vuoto il campo per gli altri articoli.</p>
+    <label for="message">Messaggio</label>
+    <textarea id="message" name="messaggio" rows="5" placeholder="Scrivi il tuo messaggio..." required></textarea>
 
-                        <div class="order-form-sections">
-                            <div class="order-category">
-                                <h3>Articoli Letto</h3>
-                                <label for="lenzuola_matrimoniale">Lenzuola Matrimoniale</label>
-                                <input type="number" name="lenzuola_matrimoniale" id="lenzuola_matrimoniale" placeholder="Quantità">
+    <div class="order-section" style="margin-top: 60px;">
+        <h2 class="section-title">Richiesta Ordine</h2>
+        <p class="contacts-description">Inserisci le quantità annue che sfrutti di biancheria, lasciando vuoto il campo per gli altri articoli.</p>
 
-                                <label for="lenzuola_singolo">Lenzuola Singolo</label>
-                                <input type="number" name="lenzuola_singolo" id="lenzuola_singolo" placeholder="Quantità">
+        <div class="order-form-sections">
+            <div class="order-category">
+                <h3>Articoli Letto</h3>
+                <label for="lenzuola_matrimoniale">Lenzuola Matrimoniale</label>
+                <input type="number" name="lenzuola_matrimoniale" id="lenzuola_matrimoniale" placeholder="Quantità">
 
-                                <label for="federa">Federa</label>
-                                <input type="number" name="federa" id="federa" placeholder="Quantità">
+                <label for="lenzuola_singolo">Lenzuola Singolo</label>
+                <input type="number" name="lenzuola_singolo" id="lenzuola_singolo" placeholder="Quantità">
 
-                                <label for="copriletti">Copriletti</label>
-                                <input type="number" name="copriletti" id="copriletti" placeholder="Quantità">
-                            </div>
+                <label for="federa">Federa</label>
+                <input type="number" name="federa" id="federa" placeholder="Quantità">
 
-                            <div class="order-category">
-                                <h3>Articoli Bagno</h3>
-                                <label for="asciugamano_viso">Asciugamano Viso Spugna</label>
-                                <input type="number" name="asciugamano_viso" id="asciugamano_viso" placeholder="Quantità">
+                <label for="copriletti">Copriletti</label>
+                <input type="number" name="copriletti" id="copriletti" placeholder="Quantità">
+            </div>
 
-                                <label for="asciugamano_bidet">Asciugamano Bidet</label>
-                                <input type="number" name="asciugamano_bidet" id="asciugamano_bidet" placeholder="Quantità">
+            <div class="order-category">
+                <h3>Articoli Bagno</h3>
+                <label for="asciugamano_viso">Asciugamano Viso Spugna</label>
+                <input type="number" name="asciugamano_viso" id="asciugamano_viso" placeholder="Quantità">
 
-                                <label for="telo_bagno">Telo Bagno</label>
-                                <input type="number" name="telo_bagno" id="telo_bagno" placeholder="Quantità">
+                <label for="asciugamano_bidet">Asciugamano Bidet</label>
+                <input type="number" name="asciugamano_bidet" id="asciugamano_bidet" placeholder="Quantità">
 
-                                <label for="scendibagno">Scendibagno</label>
-                                <input type="number" name="scendibagno" id="scendibagno" placeholder="Quantità">
+                <label for="telo_bagno">Telo Bagno</label>
+                <input type="number" name="telo_bagno" id="telo_bagno" placeholder="Quantità">
 
-                                <label for="accappatoio">Accappatoio</label>
-                                <input type="number" name="accappatoio" id="accappatoio" placeholder="Quantità">
-                            </div>
+                <label for="scendibagno">Scendibagno</label>
+                <input type="number" name="scendibagno" id="scendibagno" placeholder="Quantità">
 
-                            <div class="order-category">
-                                <h3>Articoli Tavola</h3>
-                                <label for="tovaglie">Tovaglie</label>
-                                <input type="number" name="tovaglie" id="tovaglie" placeholder="Quantità">
+                <label for="accappatoio">Accappatoio</label>
+                <input type="number" name="accappatoio" id="accappatoio" placeholder="Quantità">
+            </div>
 
-                                <label for="coprimacchia">Coprimacchia</label>
-                                <input type="number" name="coprimacchia" id="coprimacchia" placeholder="Quantità">
+            <div class="order-category">
+                <h3>Articoli Tavola</h3>
+                <label for="tovaglie">Tovaglie</label>
+                <input type="number" name="tovaglie" id="tovaglie" placeholder="Quantità">
 
-                                <label for="tovaglioli">Tovaglioli</label>
-                                <input type="number" name="tovaglioli" id="tovaglioli" placeholder="Quantità">
-                            </div>
+                <label for="coprimacchia">Coprimacchia</label>
+                <input type="number" name="coprimacchia" id="coprimacchia" placeholder="Quantità">
 
-                            <div class="order-category">
-                                <h3>Informazioni di Consegna</h3>
-                                <label for="nome-cognome">Nome e Cognome</label>
-                                <input type="text" name="nome-cognome" id="nome-cognome" placeholder="Il tuo nome completo" required>
+                <label for="tovaglioli">Tovaglioli</label>
+                <input type="number" name="tovaglioli" id="tovaglioli" placeholder="Quantità">
+            </div>
 
-                                <label for="indirizzo">Indirizzo di Consegna</label>
-                                <input type="text" name="indirizzo" id="indirizzo" placeholder="Via, Città, CAP" required>
+            <div class="order-category">
+                <h3>Informazioni di Consegna</h3>
+                <label for="nome-cognome">Nome e Cognome</label>
+                <input type="text" name="nome-cognome" id="nome-cognome" placeholder="Il tuo nome completo" required>
 
-                                <label for="data-consegna">Data Richiesta</label>
-                                <input type="date" name="data-consegna" id="data-consegna" required>
+                <label for="indirizzo">Indirizzo di Consegna</label>
+                <input type="text" name="indirizzo" id="indirizzo" placeholder="Via, Città, CAP" required>
 
-                                <label for="note">Note Aggiuntive</label>
-                                <textarea name="note" id="note" rows="4" placeholder="Scrivi eventuali richieste..."></textarea>
-                            </div>
-                        </div>
-                    </div>
-                    <button type="submit">Invia Messaggio</button>
-                </form>
+                <label for="data-consegna">Data Richiesta</label>
+                <input type="date" name="data-consegna" id="data-consegna" required>
+
+                <label for="note">Note Aggiuntive</label>
+                <textarea name="note" id="note" rows="4" placeholder="Scrivi eventuali richieste..."></textarea>
+            </div>
+        </div>
+    </div>
+    <button type="submit">Invia Messaggio</button>
+</form>
+
             </div>
         </div>
     </section>
