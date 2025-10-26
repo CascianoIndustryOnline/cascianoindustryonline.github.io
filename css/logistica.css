@@ -431,3 +431,69 @@ body {
 .producer-logo:hover {
   transform: scale(1.1);
 }
+
+
+.box-certificati {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  align-items: flex-start;
+  margin-top: 3rem;
+}
+
+.box-sinistra, .box-destra {
+  flex: 1 1 48%;
+  background: #f9f9f9;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.box-sinistra h2, .box-destra h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.box-sinistra ul, .box-destra ul {
+  margin: 1rem 0 1rem 1.5rem;
+  list-style: disc;
+}
+
+.box-sinistra .verifica, .box-destra .verifica {
+  margin-top: 1.5rem;
+  font-style: italic;
+}
+
+.pdf-preview {
+  margin-top: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.btn-download {
+  display: inline-block;
+  margin-top: 1rem;
+  background: #005baa;
+  color: #fff;
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.btn-download:hover {
+  background: #003f7d;
+}
+
+@media (max-width: 900px) {
+  .box-certificati {
+    flex-direction: column;
+  }
+  .box-sinistra, .box-destra {
+    flex: 1 1 100%;
+  }
+}
